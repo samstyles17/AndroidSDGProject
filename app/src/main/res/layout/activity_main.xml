@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@drawable/appbg"
+    tools:ignore="HardcodedText">
+
+    <TextView
+        android:id="@+id/caption"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:fontFamily="@font/aref_ruqaa_bold"
+        android:text="WELCOME"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/filledTextField"
+        android:layout_width="294dp"
+        android:layout_height="65dp"
+
+        android:layout_marginTop="25dp"
+        android:hint="Please enter your name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/caption">
+
+        <!--this is the actual edit text which takes the input-->
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <ImageSwitcher
+        android:id="@+id/imageSwitcher"
+        android:layout_width="196dp"
+        android:layout_height="184dp"
+
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintEnd_toEndOf="@+id/filledTextField"
+        app:layout_constraintStart_toStartOf="@+id/filledTextField"
+        app:layout_constraintTop_toBottomOf="@+id/filledTextField" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingActionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:contentDescription="previous"
+        app:layout_constraintEnd_toStartOf="@+id/floatingActionButton2"
+        app:layout_constraintStart_toStartOf="@+id/imageSwitcher"
+        app:layout_constraintTop_toBottomOf="@+id/imageSwitcher"
+        app:srcCompat="@android:drawable/ic_media_previous" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingActionButton2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="50dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:contentDescription="next"
+        app:layout_constraintEnd_toEndOf="@+id/imageSwitcher"
+        app:layout_constraintTop_toBottomOf="@+id/imageSwitcher"
+        app:srcCompat="@android:drawable/ic_media_next" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/explore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="100dp"
+
+        android:backgroundTint="@color/red"
+        android:text="CLICK TO EXPLORE NO POVERTY"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageSwitcher" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/visit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="15dp"
+        android:backgroundTint="@color/blue"
+        android:text="VISIT UNDP WEBSITE"
+        app:layout_constraintEnd_toEndOf="@+id/explore"
+        app:layout_constraintStart_toStartOf="@+id/explore"
+        app:layout_constraintTop_toBottomOf="@+id/explore" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/ok"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="70dp"
+        android:backgroundTint="@color/blue"
+        android:text="OK"
+        app:layout_constraintEnd_toEndOf="@+id/visit"
+        app:layout_constraintStart_toStartOf="@+id/visit"
+        app:layout_constraintTop_toBottomOf="@+id/visit" />
+
+    <Switch
+        android:id="@+id/switch1"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginTop="15dp"
+        android:text="Willing to help"
+        app:layout_constraintEnd_toEndOf="@+id/visit"
+        app:layout_constraintStart_toStartOf="@+id/visit"
+        app:layout_constraintTop_toBottomOf="@+id/visit" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
